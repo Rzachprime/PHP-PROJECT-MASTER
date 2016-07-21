@@ -1,0 +1,124 @@
+<?php
+$num1 = mysql_num_rows($errorslist);
+                
+$i = 0; while ($i < $num1) 
+{
+$id=mysql_result($errorslist, $i,"id#");
+$name=mysql_result($errorslist,$i,"name");
+$email=mysql_result($errorslist,$i,"email");
+$report=mysql_result($errorslist,$i,"report");
+$submitted=mysql_result($errorslist,$i,"submitted");
+ $i++; } 
+ ?>
+
+
+
+
+
+?>
+
+
+
+
+
+$sth = $dbh->prepare("SELECT `field1`, `field2`, `field3`, `field4`, `field5` FROM a_temp");
+$sth->execute();
+?>
+<?php while( $row = $sth->fetch(PDO::FETCH_ASSOC) ) { ?>
+<tr>
+    <td><?php echo $row['field1']; ?></td>
+    <td><?php echo $row['field2']; ?></td>
+    <td><?php echo $row['field3']; ?></td>
+    <td><?php echo $row['field4']; ?></td>
+    <td><?php echo $row['field5']; ?></td>
+</tr>
+<?php } ?>
+</table>
+
+
+
+    
+    
+    
+    
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Report</th>
+            <th>Submitted</th>
+        </tr>
+    </thead>
+        <?php
+            $user = "root";
+            $password = "root";
+            $db = new PDO("mysql:host=localhost;dbname=tracking;port=8889", "$user", "$password");
+            $sql = "SELECT * FROM issues";
+            $query = $db->prepare($sql);
+            $query->execute();
+            $results = $query->fetchALL(PDO::FETCH_ASSOC));
+        ?>
+      
+        
+    <tbody>
+        
+        <?php
+            foreach($results as $row) {
+              echo "<tr><td";
+                echo $row['id'];
+                echo "</td><td>";
+                echo $row['name'];
+                echo "</td><td>";
+                echo $row['email'];
+                echo "</td><td>";
+                echo $row['report'];
+                echo "</td><td>";
+                echo $row['submitted'];
+                echo "</td><td>";
+            echo "</tr>";
+            }
+        ?>
+        
+    </tbody>
+  </table>
+  
+  
+  <?php
+  try {
+  $con= new PDO('mysql:host=localhost;dbname=tracking', "root", "root");
+  $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $query = "SELECT * FROM issues";
+ 
+  //first pass just gets the column names
+  print "<table class=\"pure-table\"> \n";
+  $result = $con->query($query);
+  //return only the first row (we only need field names)
+  $row = $result->fetch(PDO::FETCH_ASSOC);
+  print " <thead><tr> \n";
+  foreach ($row as $field => $value){
+   print " <th>$field</th> \n";c
+  } // end foreach
+  print " </tr></thead> \n";
+  //second query gets the data
+  $data = $con->query($query);
+  $data->setFetchMode(PDO::FETCH_ASSOC);
+  foreach($data as $row){
+   print " <tbody><tr> \n";
+   foreach ($row as $name=>$value){
+   print " <td>$value</td> \n";
+   } // end field loop
+   print " </tr></tbody> \n";
+  } // end record loop
+  print "</table> \n";
+  } catch(PDOException $e) {
+   echo 'ERROR: ' . $e->getMessage();
+  } // end try
+ ?>
+ 
+     
+Name: <input type="text" id="phpform" name="name" background="black" /></br></br>
+Type: <input type="text" id="phpform" name="email" background="black" /></br></br>
+CP: <input type="text" id="phpform" name="report" background="black" /></br></br>
+</br>
+<input type="Submit" class="button-large pure-button" background="black" /></form>
