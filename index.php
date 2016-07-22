@@ -160,7 +160,6 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
                body {
     background-image: url(images/images/simple.png);
     background-color: bisque;
-    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     
