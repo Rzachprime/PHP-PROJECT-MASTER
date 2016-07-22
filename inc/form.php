@@ -5,6 +5,7 @@
     <table>
     <?php if ($errors) { ?>
         <tr>
+            //Tells user they have errors to correct and shows them what they are
             <td>You need to correct the following errors:</td>
             <td><ul>
                 <?php foreach ($errors as $error) { ?>

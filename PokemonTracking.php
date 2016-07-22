@@ -164,6 +164,8 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
  
  <body>
 <div style="height: 33%; width: 90%">
+<style type = "text/css"> table {width: 75%}; </style>
+<style type = "text/css"> table {margin: 0 auto}; </style>
     <p>
         <?php include('inc/table.php'); ?>
     

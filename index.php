@@ -106,8 +106,8 @@
     <div class="pure-u-1 pure-u-md-1-3">
         <div class="pure-menu pure-menu-horizontal custom-can-transform">
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item"><a href="index.php" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="PokemonTracking.php" class="pure-menu-link">Pokedex</a></li>
             </ul>
         </div>
     </div>
@@ -162,24 +162,10 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    background-color: transparent
     
-            color: darkblue;
-            text-shadow: black;
+            color: red;
                }
                
-                body:after {
-    content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url(/wp-content/uploads/2010/11/tandem.jpg); 
-    width: 100%;
-    height: 100%;
-    opacity : 0.2;
-    z-index: -1;
-}
         </style>
         
     <div id="main">

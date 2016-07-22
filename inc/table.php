@@ -1,6 +1,5 @@
 <style type = "text/css"> table, th, td {border: 2px solid black}; </style>
-<style type = "text/css"> table {width: 75%}; </style>
-<style type = "text/css"> table {margin: 0 auto}; </style>
+
 <style type = "text/css"> td {text-align: center}; </style>
 <style type = "text/css"> tr:nth-child(even) {background-color: #f2f2f2}; </style>
 
