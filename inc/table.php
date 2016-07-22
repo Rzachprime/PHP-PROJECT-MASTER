@@ -2,7 +2,7 @@
 
 <style type = "text/css"> td {text-align: center}; </style>
 <style type = "text/css"> tr:nth-child(even) {background-color: #f2f2f2}; </style>
-
+<style type = "text/css"> tr:nth-child(odd) {background-color: tan}; </style>
 
 <div style="overflow-x:auto;">
 <?php

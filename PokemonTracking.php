@@ -92,6 +92,12 @@
     }
 
 }
+        body {
+            background-image: url(images/images/simple.png);
+            color: black;
+            
+        }
+
 </style>
 
 
@@ -105,9 +111,9 @@
     <div class="pure-u-1 pure-u-md-1-3">
         <div class="pure-menu pure-menu-horizontal custom-can-transform">
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">About</a></li>
-                <li class="pure-menu-item"><a href="contact.html" class="pure-menu-link">Contact</a></li>
+                <li class="pure-menu-item"><a href="index.php" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="PokemonTracking.php" class="pure-menu-link">Pokedex</a></li>
+                
             </ul>
         </div>
     </div>
@@ -154,12 +160,30 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
 })(this, this.document);
 
 </script>
+  
+    
+    <body>
+  
+    
+    
+    
+    
+    
+    
+<div style="width: 90%; margin: auto; padding 10px">    
 <h2 class="content-subhead">Pokemon Database</h2>
 <p>This is a Pokemon database to track the combat power of Pokemon that you have collected in Pokemon Go.</p>
 <p>You enter the name, type, and cp of your captured pokemon in the Pokedex by filling out the following form and then pressing the Update Pokedex button.</p>
+    </div>
+    <div style="width: 33%; margin: auto; padding 10px">
+      </body>
 <?php include('inc/insert.php'); ?>
+      
+    </div>
+    <div style="width: 90%; margin: auto; padding 10px">
  <h2 class="content-subhead">Pokedex</h2>
 <p>This is a Pokemon Database called the Pokedex. You can see all of your Pokemon listed in the order you submitted them.</p>
+    </div>
 <style type = "text/css"> table, th, td {border: 2px solid black}; </style>
  
  <body>

@@ -158,16 +158,17 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
     <body>
            <style type="text/css">
                body {
-    background-image: url("images/images/Pokeball.png");
+    background-image: url(images/images/simple.png);
+    background-color: bisque;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     
-            color: red;
+            color: black;
                }
                
         </style>
-        
+    <div style="width: 90%; margin: auto; padding 10px">    
     <div id="main">
         <div class="header">
             <h1>Richard's Web Project</h1>
@@ -182,7 +183,7 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
 
             <h2 class="content-subhead">Website map</h2>
             <p>
-                This is the home page. The database page has input for updating pokemon in the database and it shows the table of pokemon I have collected. 
+                This is the home page. The Pokedex page has input for updating pokemon in the database and it shows the table of pokemon I have collected. 
             </p>
 
             <h2 class="content-subhead">This website is responsive</h2>
@@ -191,6 +192,7 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
             </p>
         </div>
     </div>
+        </div>
 
 
 
