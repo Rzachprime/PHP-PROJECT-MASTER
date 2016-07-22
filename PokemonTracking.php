@@ -1,16 +1,22 @@
-
+<html lang="en">
 <head>
-<!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="css/grids-responsive.css">
-<!--<![endif]-->
-<link rel="stylesheet" href="css/normailize.css">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Pokedex" content="Main page which describes the purpose and general structure">
 
-<style>
+    <title>Pokemon Database Project</title>
+
+    
+
+
+<link rel="stylesheet" href="styles/pure.php" type="text/css">
+
+<link rel="stylesheet" href="styles/pokestyle.php" type="text/css">
+
+</head>
+    <style>
 .custom-wrapper {
-    background-color: deepskyblue;
+    background-color: skyblue;
     margin-bottom: 2em;
     -webkit-font-smoothing: antialiased;
     height: 10em;
@@ -87,8 +93,9 @@
 
 }
 </style>
-</head>
-<div class="custom-wrapper pure-g" id="menu">
+
+
+<div class="custom-wrapper pure-g">
     <div class="pure-u-1 pure-u-md-1-3">
         <div class="pure-menu">
             <a href="#" class="pure-menu-heading custom-brand">Pokedex</a>
@@ -104,14 +111,7 @@
             </ul>
         </div>
     </div>
-    <div class="pure-u-1 pure-u-md-1-3">
-        <div class="pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform">
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Yahoo</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">W3C</a></li>
-            </ul>
-        </div>
-    </div>
+    
 </div>
 <script>
 (function (window, document) {
@@ -160,45 +160,13 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
 <?php include('inc/insert.php'); ?>
  <h2 class="content-subhead">Pokedex</h2>
 <p>This is a Pokemon Database called the Pokedex. You can see all of your Pokemon listed in the order you submitted them.</p>
-            <style type = "text/css">
-  table, th, td {border: 1px solid black};
- </style>
- </head>
- <body>
-<div>
-    <p>
-    <?php
-        // create a self populating table from the database
-  try {
-  $con= new PDO('mysql:host=localhost;dbname=pokemon;port=8889', "root", "root");
-  $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $query = "SELECT * FROM pokedex";
+<style type = "text/css"> table, th, td {border: 2px solid black}; </style>
  
-  //first pass gets the column names
-  print "<table> \n";
-  $result = $con->query($query);
-  //return only the first row 
-  $row = $result->fetch(PDO::FETCH_ASSOC);
-  print " <tr> \n";
-  foreach ($row as $field => $value){
-   print " <th>$field</th> \n";
-  } // end foreach
-  print " </tr> \n";
-  //second query gets the data
-  $data = $con->query($query);
-  $data->setFetchMode(PDO::FETCH_ASSOC);
-  foreach($data as $row){
-   print " <tr> \n";
-   foreach ($row as $name=>$value){
-   print " <td>$value</td> \n";
-   } // end field loop
-   print " </tr> \n";
-  } // end record loop
-  print "</table> \n";
-  } catch(PDOException $e) {
-   echo 'ERROR: ' . $e->getMessage();
-  } // end try
- ?>
+ <body>
+<div style="height: 33%; width: 90%">
+    <p>
+        <?php include('inc/table.php'); ?>
+    
     </p>
     
     
